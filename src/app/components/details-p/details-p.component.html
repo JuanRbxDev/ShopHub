@@ -4,18 +4,16 @@
 <section id="st-Product" class="st-Product">
 
     <div class="content-img-p">
-        <img src="https://frikibase.com/wp-content/uploads/2023/10/Figura-Elaina-Collection-Light-the-Journey-of-Elaina-Wandering-Witch-16cm-frikibase.jpg"
-            alt="">
+        <img [src]="hombre?.imagen" alt="">
     </div>
 
     <div class="content-details-p">
-        <p>Categoría</p>
-        <h2>Nombre del Producto</h2>
-        <p>codigo</p>
-        <h2>S/. 1200</h2>
-        <p class="descp">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, sunt quibusdam! Cumque enim
-            obcaecati ullam
-            eveniet nulla dolore eos a sint eum tempore inventore nihil, quasi illo voluptatem harum ipsum!
+        <p>{{hombre?.categoria}}</p>
+        <h2>{{hombre?.nombre}}</h2>
+        <p>Codigo: {{hombre?.id}}</p>
+        <h2>S/. {{hombre?.precioOferta}} - {{hombre?.precio}}</h2>
+        <p class="descp">
+            {{hombre?.descripcion}}
         </p>
 
         <label class="subTitle">

@@ -132,14 +132,12 @@ p {
     font-size: 16px;
     outline: none;
     -moz-appearance: textfield;
-    /* Para Firefox */
 }
 
 .quantity-selector .quantity-input::-webkit-outer-spin-button,
 .quantity-selector .quantity-input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
-    /* Para Chrome, Safari y Edge */
 }
 
 

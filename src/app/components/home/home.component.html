@@ -26,26 +26,33 @@
 
     <section class="featured-section">
 
-        <div class="featured-item">
-            <img src="https://img.pikbest.com/origin/06/48/74/76YpIkbEsT5yK.jpg!w700wp" alt="Women's Style">
+        <!-- Primer banner -->
+        <div class="featured-item" *ngIf="bannerAds.length > 0">
+            <img [src]="bannerAds[0].foto || 'https://img.pikbest.com/origin/06/48/74/76YpIkbEsT5yK.jpg!w700wp'" alt="{{ bannerAds[0]?.titulo }}">
         </div>
-
+    
         <div class="content-featured">
-
-            <div class="featured-item1">
-                <img src="https://img.pikbest.com/origin/06/48/74/76YpIkbEsT5yK.jpg!w700wp" alt="Handbag">
+    
+            <!-- Segundo banner -->
+            <div class="featured-item1" *ngIf="bannerAds.length > 1">
+                <img [src]="bannerAds[1].foto || 'https://img.pikbest.com/origin/06/48/74/76YpIkbEsT5yK.jpg!w700wp'" alt="{{ bannerAds[1]?.titulo }}">
             </div>
-
-            <div class="featured-item1">
-                <img src="https://img.pikbest.com/origin/06/48/74/76YpIkbEsT5yK.jpg!w700wp" alt="Watch">
+    
+            <!-- Tercer banner -->
+            <div class="featured-item1" *ngIf="bannerAds.length > 2">
+                <img [src]="bannerAds[2].foto || 'https://img.pikbest.com/origin/06/48/74/76YpIkbEsT5yK.jpg!w700wp'" alt="{{ bannerAds[2]?.titulo }}">
             </div>
-
-            <div class="featured-item3">
-                <img src="https://img.pikbest.com/origin/06/48/74/76YpIkbEsT5yK.jpg!w700wp" alt="Backpack">
+    
+            <!-- Cuarto banner -->
+            <div class="featured-item3" *ngIf="bannerAds.length > 3">
+                <img [src]="bannerAds[3].foto || 'https://img.pikbest.com/origin/06/48/74/76YpIkbEsT5yK.jpg!w700wp'" alt="{{ bannerAds[3]?.titulo }}">
             </div>
+    
         </div>
-
+    
     </section>
+    
+    
 
 
 

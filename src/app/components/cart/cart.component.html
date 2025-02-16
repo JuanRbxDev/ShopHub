@@ -1,1 +1,62 @@
-<p>cart works!</p>
+<div class="cart-container">
+    <div class="cart-table-container">
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Details</th>
+                    <th>Size/Color</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tdTbody">
+                        <img src="tshirt.jpg" alt="T-shirt">
+                        <span>Relaxed Fit T-shirt</span>
+                    </td>
+                    <td>$12.99 <span class="in-stock">In Stock</span></td>
+                    <td class="tdTbody">
+                        <p>XL</p>
+                        <p>Blue</p>
+                    </td>
+                    <td>
+                        <button>-</button>
+                        <span>1</span>
+                        <button>+</button>
+                    </td>
+                    <td>$12.99</td>
+                    <td class="actions">
+                        <button>❤️ Save</button>
+                        <button>🗑️ Delete</button>
+                    </td>
+                </tr>
+                <!-- Puedes agregar más productos aquí -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="order-summary">
+        <h3>Order Summary</h3>
+        <div class="summary-item">
+            <span>Sub Total</span>
+            <span><strong>$2000 USD</strong></span>
+        </div>
+        <div class="summary-item">
+            <span>Discount (10%)</span>
+            <span>-1000 USD</span>
+        </div>
+        <div class="summary-item">
+            <span>Delivery fee</span>
+            <span>50.00 USD</span>
+        </div>
+        <hr>
+        <div class="summary-item total">
+            <span>Total</span>
+            <span>$1850 USD</span>
+        </div>
+        <button class="checkout-btn">Checkout Now</button>
+    </div>
+</div>

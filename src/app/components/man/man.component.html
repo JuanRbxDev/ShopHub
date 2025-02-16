@@ -1,62 +1,80 @@
-<!-- Productos Destacados -->
-<section class="featured-products">
+<p class="cargandoXD" *ngIf="loading">Cargando productos...</p>
 
-    <h2>Hombre</h2>
+<section class="featured-products" *ngIf="!loading">
 
-    <div class="product-container">
+    <!-- Barra de filtros horizontal -->
+    <div class="filters">
 
-        <div class="product">
-            <img src="https://img.pikbest.com/origin/06/48/74/76YpIkbEsT5yK.jpg!w700wp" alt="Backpack">
-            <p>Tan Solid Laptop Backpack</p>
-            <p class="price">$149.00 - $185.00</p>
-        </div>
+        <!-- Filtros horizontales -->
+        <div class="filter-items">
 
-        <div class="product">
-            <img src="https://img.pikbest.com/origin/06/48/74/76YpIkbEsT5yK.jpg!w700wp" alt="Backpack">
-            <p>Tan Solid Laptop Backpack</p>
-            <p class="price">$149.00 - $185.00</p>
-        </div>
-        <div class="product">
-            <img src="https://img.pikbest.com/origin/06/48/74/76YpIkbEsT5yK.jpg!w700wp" alt="Backpack">
-            <p>Tan Solid Laptop Backpack</p>
-            <p class="price">$149.00 - $185.00</p>
-        </div>
-        <div class="product">
-            <img src="https://img.pikbest.com/origin/06/48/74/76YpIkbEsT5yK.jpg!w700wp" alt="Backpack">
-            <p>Tan Solid Laptop Backpack</p>
-            <p class="price">$149.00 - $185.00</p>
-        </div>
-        <div class="product">
-            <img src="https://img.pikbest.com/origin/06/48/74/76YpIkbEsT5yK.jpg!w700wp" alt="Backpack">
-            <p>Tan Solid Laptop Backpack</p>
-            <p class="price">$149.00 - $185.00</p>
-        </div>
-        <div class="product">
-            <img src="https://img.pikbest.com/origin/06/48/74/76YpIkbEsT5yK.jpg!w700wp" alt="Backpack">
-            <p>Tan Solid Laptop Backpack</p>
-            <p class="price">$149.00 - $185.00</p>
-        </div>
-        <div class="product">
-            <img src="https://img.pikbest.com/origin/06/48/74/76YpIkbEsT5yK.jpg!w700wp" alt="Backpack">
-            <p>Tan Solid Laptop Backpack</p>
-            <p class="price">$149.00 - $185.00</p>
-        </div>
+            <!-- Filtro por categoría -->
+            <div class="filter-item">
+                <label for="category">Categoría</label>
+                <select id="category">
+                    <option value="">Todas</option>
+                    <option value="Ropa">Ropa</option>
+                    <option value="Zapatos">Zapatos</option>
+                    <option value="Accesorios">Accesorios</option>
+                </select>
+            </div>
 
+            <!-- Filtro por rango de precio -->
+            <div class="filter-item">
+                <label for="price">Precio</label>
+                <select id="price">
+                    <option value="">Todos</option>
+                    <option value="bajo">Bajo a Alto</option>
+                    <option value="alto">Alto a Bajo</option>
+                </select>
+            </div>
 
-        <div class="product">
-            <img src="https://img.pikbest.com/origin/06/48/74/76YpIkbEsT5yK.jpg!w700wp" alt="Jacket">
-            <p>Brown Solid Biker Jacket</p>
-            <p class="price">$110.00 - $120.00</p>
-        </div>
-        <div class="product">
-            <img src="https://img.pikbest.com/origin/06/48/74/76YpIkbEsT5yK.jpg!w700wp" alt="Shoes">
-            <p>Men Brown Mid-Top Sneakers</p>
-            <p class="price">$115.00</p>
-        </div>
-        <div class="product">
-            <img src="https://img.pikbest.com/origin/06/48/74/76YpIkbEsT5yK.jpg!w700wp" alt="Dress">
-            <p>Petite Olive Green Solid Top</p>
-            <p class="price">$49.00</p>
+            <!-- Filtro por disponibilidad -->
+            <div class="filter-item">
+                <label for="stock">Disponibilidad</label>
+                <select id="stock">
+                    <option value="">Todos</option>
+                    <option value="inStock">En stock</option>
+                    <option value="outOfStock">Agotado</option>
+                </select>
+            </div>
+
+            <!-- Filtro por orden alfabético -->
+            <div class="filter-item">
+                <label for="alphabet">Ordenar por</label>
+                <select id="alphabet">
+                    <option value="">Alfabéticamente</option>
+                    <option value="asc">A - Z</option>
+                    <option value="desc">Z - A</option>
+                </select>
+            </div>
+
+            <!-- Filtro por valor (mayor a menor o menor a mayor) -->
+            <div class="filter-item">
+                <label for="value">Ordenar por valor</label>
+                <select id="value">
+                    <option value="">Precio</option>
+                    <option value="mayor">Mayor a Menor</option>
+                    <option value="menor">Menor a Mayor</option>
+                </select>
+            </div>
+
         </div>
     </div>
+
+    <!-- Productos -->
+
+    <div class="product-container">
+        <div class="product" *ngFor="let hombre of hombres">
+            <img [src]="hombre.imagen || 'https://previews.123rf.com/images/kaymosk/kaymosk1804/kaymosk180400005/99776312-error-404-p%C3%A1gina-no-encontrada-error-con-efecto-de-falla-en-la-pantalla-ilustraci%C3%B3n-vectorial.jpg'"
+                (error)="cambiarImagenPorDefecto($event)" alt="{{ hombre.nombre }}">
+
+            <p>{{ hombre.nombre }}</p>
+            <p class="price">{{ hombre.precioOferta | currency }} - {{ hombre.precio | currency }}</p>
+
+        <button class="btn-detail" [routerLink]="['/detalles', hombre.id]">Ver Detalles</button>
+
+        </div>
+    </div>
+
 </section>
