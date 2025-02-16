@@ -1,0 +1,358 @@
+.title-page {
+    font-size: 3rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 10px;
+    text-align: center;
+    padding-top: 120px;
+}
+
+.st-Product {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 600px 200px;
+    gap: 5px;
+    justify-content: center;
+    align-content: center;
+    margin-top: 4%;
+}
+
+.content-img-p {
+    background-color: rgb(243, 243, 243);
+    overflow: hidden;
+    padding: 20px;
+}
+
+.content-img-p img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.content-details-p {
+    padding: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+h2 {
+    font-size: 2rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 5px;
+}
+
+p {
+    font-size: 1.1rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #444444;
+}
+
+.descp,
+.subTitle,
+.tallas,
+.colors {
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+
+.colors {
+    display: flex;
+    gap: 10px;
+}
+
+.colors input {
+    width: 25px;
+    height: 25px;
+}
+
+
+
+.actions {
+    margin-top: 40px;
+}
+
+.subTitle {
+    margin-top: 20px;
+}
+
+
+.tallas {
+    width: fit-content;
+    border: 1px solid #666;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+}
+
+.tallas input {
+    display: none;
+}
+
+.tallas label {
+    font-family: sans-serif;
+    padding: 10px 16px;
+    border-right: 1px solid #ccc;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.tallas label:last-of-type {
+    border-right: 0;
+}
+
+.tallas label:hover {
+    background: #eee;
+}
+
+.tallas input:checked+label {
+    background: #becbff;
+}
+
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    width: auto;
+    gap: 10px;
+}
+
+.quantity-selector .quantity-input {
+    width: 40px;
+    text-align: center;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    -moz-appearance: textfield;
+    /* Para Firefox */
+}
+
+.quantity-selector .quantity-input::-webkit-outer-spin-button,
+.quantity-selector .quantity-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    /* Para Chrome, Safari y Edge */
+}
+
+
+
+.quantity-selector button {
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.2s;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+}
+
+.quantity-selector button:hover {
+    background-color: #ddd;
+}
+
+.quantity-selector .quantity-input {
+    width: 40px;
+    text-align: center;
+    border: none;
+    font-size: 16px;
+    outline: none;
+}
+
+
+.actions {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+
+.btnAddToCart {
+    padding-inline: 50px;
+    height: 100vh;
+    max-height: 50px;
+    cursor: pointer;
+    border: none;
+    background-color: #becbff;
+    transition: .3s;
+}
+
+.btnAddToCart:hover {
+    background: #2e2e2e;
+    color: #fff;
+}
+
+.btnBuyNow {
+    padding-inline: 50px;
+    height: 100vh;
+    max-height: 50px;
+    cursor: pointer;
+    border: none;
+    background-color: #272727;
+    transition: .3s;
+    color: #fff;
+}
+
+.btnBuyNow:hover {
+    background-color: #becbff;
+    color: #272727;
+}
+
+
+.content-others-photos-p {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.content-others-photos-p img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.content-others {
+    padding: 10px;
+}
+
+
+
+.info {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+}
+
+.info nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.info nav a {
+    padding-inline: 20px;
+    color: #272727;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2rem;
+}
+
+
+.info span {
+    width: 100%;
+    border: #e4e4e4 solid 1px;
+}
+
+
+.titleOthersProducts {
+    margin-block: 2%;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+.content-o-p {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 15px;
+}
+
+.card {
+    width: 300px;
+    height: auto;
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 5px;
+    overflow: hidden;
+}
+
+.content-foto {
+    background-color: rgb(240, 240, 240);
+    height: 350px;
+}
+
+.content-foto a {
+    text-decoration: none;
+    color: white;
+}
+
+.content-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.marcaP {
+    font-size: 1rem;
+    color: rgb(158, 156, 156);
+}
+
+.nameP {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.btnFavorite {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    border: none;
+    background: white;
+    box-shadow: #272727 0px 0px 2px;
+}
+
+
+
+.card label h3:nth-child(1) {
+    color: rgb(32, 32, 32);
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.card label h3:nth-child(2) {
+    text-decoration: line-through;
+    color: #7a7a7a;
+}
+
+.card label {
+    display: flex;
+    gap: 20px;
+    justify-content: start;
+    align-items: center;
+    margin-top: 10px;
+}

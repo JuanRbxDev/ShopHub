@@ -1,0 +1,186 @@
+.sect-1 {
+    padding-top: 80px;
+}
+
+/* Banner */
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(59, 38, 38);
+    background-size: cover;
+    height: 80vh;
+    width: 100%;
+    max-height: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.banner video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 22%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.banner-text h2 {
+    color: #ffffff;
+    font-size: 5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+.banner-text h1 {
+    font-size: 40px;
+    color: #1a89ff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.banner-text p {
+    font-size: 25px;
+    margin: 10px 0;
+    color: aliceblue;
+}
+
+.banner-text button {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Beneficios */
+.benefits {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(255, 255, 255);
+    padding-inline: 20px;
+    padding-block: 50px;
+}
+
+.benefit {
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+
+
+
+
+/* Productos Destacados */
+.featured-products {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+
+.featured-products h2 {
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-block: 50px;
+}
+
+.product-container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+    align-content: center;
+    gap: 50px;
+}
+
+.product {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.price {
+    font-weight: bold;
+    color: #0056b3;
+    margin-top: 5px;
+}
+
+
+
+
+
+
+
+
+
+.featured-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 1500px;
+    height: 70vh;
+    max-height: 700px;
+    margin: auto;
+    position: relative;
+    padding: 5px;
+}
+
+.featured-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: rgb(248, 248, 248);
+}
+
+.featured-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.content-featured {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5px;
+    overflow: hidden;
+}
+
+
+.featured-item1,
+.featured-item2 {
+    background-color: rgb(248, 248, 248);
+}
+
+.featured-item3 {
+    grid-column: span 2;
+}
+
+.featured-item img,
+.featured-item1 img,
+.featured-item3 img {
+    max-height: 100%;
+    width: 100%;
+    object-fit: contain;
+}

@@ -1,0 +1,64 @@
+header {
+    width: 100%;
+    max-width: 1500px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.content-logo {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+}
+
+.content-logo h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 5px;
+}
+
+.logo {
+    width: 80%;
+    height: 60%;
+    object-fit: contain;
+}
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+
+nav ul li {}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+nav ul li a:hover {
+    color: gold;
+    text-decoration: underline;
+}
+
+.items {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.items ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
