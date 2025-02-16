@@ -1,3 +1,12 @@
 <section>
-
+    <div class="app-login">
+        <button class="close-btn" (click)="closeLogin()">×</button>
+        <div class="login-box">
+            <h2>Iniciar Sesión</h2>
+            <input type="text" placeholder="Correo electrónico" />
+            <input type="password" placeholder="Contraseña" />
+            <button>Ingresar</button>
+            <p>¿No tienes cuenta? <a (click)="goToRegister()">Crear cuenta</a></p>
+        </div>
+    </div>
 </section>

@@ -1,12 +1,96 @@
-section {
-    width: 100%;
-    height: 100vh;
-    background-color: rgb(255, 255, 255, 0.8);
+/* Fondo con efecto borroso */
+.app-login {
     position: fixed;
-    z-index: 100000;
-
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(8px);
 }
 
-:host{
-    position: fixed;
+/* Estilo del formulario */
+.login-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Título */
+.login-box h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Campos de entrada */
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.login-box input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+}
+
+/* Botón de inicio de sesión */
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: #272727;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.login-box button:hover {
+    background: #0056b3;
+}
+
+/* Botón de cerrar */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    color: #ff0000;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }

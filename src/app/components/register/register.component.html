@@ -1,1 +1,20 @@
-<p>register works!</p>
+<section>
+    <div class="app-register">
+        <button class="close-btn" (click)="closeRegister()">×</button>
+        <div class="register-box">
+            <h2>Crear Cuenta</h2>
+            <input type="text" placeholder="Nombre completo" />
+            <input type="email" placeholder="Correo electrónico" />
+            <input type="password" placeholder="Contraseña" />
+            <input type="password" placeholder="Confirmar contraseña" />
+            <button>Registrarse</button>
+
+            <div class="google-btn">
+                <img src="assets/google-logo.png" alt="Google">
+                <span>Registrarse con Google</span>
+            </div>
+
+            <p>¿Ya tienes cuenta? <a (click)="goToLogin()">Iniciar sesión</a></p>
+        </div>
+    </div>
+</section>
